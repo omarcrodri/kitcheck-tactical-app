@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <script>
+      (function () {
+        var theme = 'dark';
+        try {
+          var saved = localStorage.getItem('kitcheck-theme');
+          if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+        } catch (e) {}
+        var resolved = theme === 'system'
+          ? (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+          : theme;
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.resolved = resolved;
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', resolved === 'light' ? '#F4F2EE' : '#171A1C');
+      })();
+    </script>
+    <meta name="description" content="Build a real-life loadout and see what you own versus what you still need." />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon-192.png" type="image/png" />
+    <title>KitCheck Tactical</title>
+    <script type="module" crossorigin src="/kitcheck-tactical-app/assets/index-ewGv54RX.js"></script>
+    <link rel="stylesheet" crossorigin href="/kitcheck-tactical-app/assets/index-BnLLuLrI.css">
+  <script id="vite-plugin-pwa:inline-sw">if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/kitcheck-tactical-app/sw.js', { scope: '/kitcheck-tactical-app/' })})}</script></head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
