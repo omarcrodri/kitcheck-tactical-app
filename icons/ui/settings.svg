@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Recommended: crosshair dial (option B). See settings-a/b/c and README. -->
+  <circle cx="12" cy="12" r="8.15"/>
+  <circle cx="12" cy="12" r="2.15"/>
+  <path d="M12 3.85v3.15M12 17v3.15M3.85 12h3.15M17 12h3.15"/>
+  <path d="M12 2.35l1.05 1.7H10.95z" fill="currentColor" stroke="none"/>
+  <path d="M16.9 5.1l.85.85M5.1 5.1l.85.85M5.1 16.9l.85-.85M16.9 16.9l.85-.85" stroke-width="1.35"/>
+</svg>
