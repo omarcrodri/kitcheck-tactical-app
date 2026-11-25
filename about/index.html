@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-sw="../sw.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <title>About · KitCheck Tactical</title>
+    <meta name="description" content="What KitCheck Tactical does, who it is for, and how affiliate links and firearm link-outs work." />
+    <link rel="canonical" href="https://kitchecktactical.com/about/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KitCheck Tactical" />
+    <meta property="og:title" content="About · KitCheck Tactical" />
+    <meta property="og:description" content="What KitCheck Tactical does, who it is for, and how affiliate links and firearm link-outs work." />
+    <meta property="og:url" content="https://kitchecktactical.com/about/" />
+    <meta property="og:image" content="https://kitchecktactical.com/icons/icon-512.png" />
+    <meta property="og:image:alt" content="KitCheck Tactical" />
+    <link rel="manifest" href="https://kitchecktactical.com/manifest.webmanifest" />
+    <link rel="icon" href="https://kitchecktactical.com/icons/icon-192.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/index-B7SMwE__.css" />
+    <script>
+(function () {
+  var key = 'kitcheck-theme';
+  var theme = 'dark';
+  try {
+    var saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+  } catch (e) {}
+  function resolved() {
+    if (theme === 'system') return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return theme === 'light' ? 'light' : 'dark';
+  }
+  function paint() {
+    var mode = resolved();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.resolved = mode;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#F4F2EE' : '#171A1C');
+    var button = document.getElementById('theme-toggle');
+    if (button) button.textContent = theme === 'system' ? 'Theme: system' : 'Theme: ' + mode;
+  }
+  paint();
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (theme === 'system') paint();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    paint();
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark';
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      paint();
+    });
+  });
+})();
+</script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="shell doc">
+      <header class="top">
+        <a class="doc-brand" href="../">KitCheck Tactical</a>
+        <button type="button" id="theme-toggle">Theme: dark</button>
+      </header>
+      <main id="content">
+        <h1>About</h1>
+        <p>KitCheck Tactical is a loadout builder that runs in your browser. You lay out a kit, mark what you already own, and see which slots are still open.</p>
+        <p>Setup asks you to choose Civilian shooter, Prepper, or Military. A military profile can also mark gear as issued. The kit, the profile, and the photos you add stay on this device.</p>
+        <h2>How we earn</h2>
+        <p>We may earn a commission from some links at no extra cost to you. Store screens in the app say: We may earn a commission when you buy through links.</p>
+        <p>The price file shipped with the app is labeled example data. Its links point at example.com. They are not a live store, and the app does not add a fee of its own.</p>
+        <h2>Firearms and ammunition</h2>
+        <p>The app does not sell firearms or ammunition. A buy link or a store page opens another site. For a gun, ammunition, a frame, or a receiver, that link stays hidden until the age saved on this device meets the dealer minimum the app uses for your state.</p>
+        <p>Handguns and frames use the handgun minimum. Rifles, shotguns, and ammunition use the long-gun minimum. If age is missing, those links stay hidden. The app shows this line for those items: Guns ship to a licensed dealer (FFL). Check your state law. It also says the age line is an estimate, not legal advice.</p>
+        <p>Some ammunition records can also show a compare link to ammoseek.com. That link uses the same age check as the other ammunition links, the long-gun minimum for your state. It opens in a new tab when you choose it.</p>
+        <h2>Contact</h2>
+        <p>Questions go to support@kitchecktactical.com. The support form in the app opens your email app with the kind of note, the app version, the current loadout id, a reply address if you type one, and your message. Nothing is sent until you send that email.</p>
+        <nav aria-label="Write to support"><ul><li><a href="mailto:support@kitchecktactical.com">support@kitchecktactical.com</a></li></ul></nav>
+        <nav aria-label="Also on this site"><ul><li><a href="../privacy/">Privacy</a></li><li><a href="../guides/72-hour-bag/">72-hour bag</a></li><li><a href="../guides/truck-kit/">Truck kit</a></li><li><a href="../guides/range-bag/">Range bag</a></li></ul></nav>
+      </main>
+      <footer class="site-footer">
+        <nav aria-label="Guides and policies"><a href="./" aria-current="page">About</a><a href="../privacy/">Privacy</a><a href="../guides/72-hour-bag/">72-hour bag</a><a href="../guides/truck-kit/">Truck kit</a><a href="../guides/range-bag/">Range bag</a></nav>
+      </footer>
+    </div>
+    <script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var href = document.documentElement.getAttribute('data-sw');
+  if (!href) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register(new URL(href, document.baseURI).href);
+  });
+})();
+</script>
+  </body>
+</html>

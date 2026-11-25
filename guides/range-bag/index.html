@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-sw="../../sw.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <title>Range bag · KitCheck Tactical</title>
+    <meta name="description" content="A range bag checklist for eyes, ears, and the bay, with no direct buy links for guns or ammunition." />
+    <link rel="canonical" href="https://kitchecktactical.com/guides/range-bag/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KitCheck Tactical" />
+    <meta property="og:title" content="Range bag · KitCheck Tactical" />
+    <meta property="og:description" content="A range bag checklist for eyes, ears, and the bay, with no direct buy links for guns or ammunition." />
+    <meta property="og:url" content="https://kitchecktactical.com/guides/range-bag/" />
+    <meta property="og:image" content="https://kitchecktactical.com/icons/icon-512.png" />
+    <meta property="og:image:alt" content="KitCheck Tactical" />
+    <link rel="manifest" href="https://kitchecktactical.com/manifest.webmanifest" />
+    <link rel="icon" href="https://kitchecktactical.com/icons/icon-192.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/index-B7SMwE__.css" />
+    <script>
+(function () {
+  var key = 'kitcheck-theme';
+  var theme = 'dark';
+  try {
+    var saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+  } catch (e) {}
+  function resolved() {
+    if (theme === 'system') return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return theme === 'light' ? 'light' : 'dark';
+  }
+  function paint() {
+    var mode = resolved();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.resolved = mode;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#F4F2EE' : '#171A1C');
+    var button = document.getElementById('theme-toggle');
+    if (button) button.textContent = theme === 'system' ? 'Theme: system' : 'Theme: ' + mode;
+  }
+  paint();
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (theme === 'system') paint();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    paint();
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark';
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      paint();
+    });
+  });
+})();
+</script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="shell doc">
+      <header class="top">
+        <a class="doc-brand" href="../../">KitCheck Tactical</a>
+        <button type="button" id="theme-toggle">Theme: dark</button>
+      </header>
+      <main id="content">
+        <h1>Range bag</h1>
+        <p>A range bag holds what you need for a safe session at the bay. This page does not link out to buy a firearm or ammunition. Those buy links, when the app shows them, open another site and stay behind the age check.</p>
+        <h2>Eyes and ears</h2>
+        <ul><li><strong>Eye protection the range accepts</strong><span class="why">The line throws brass, fragments, and the unexpected. Bring a pair you will actually wear.</span></li><li><strong>Ear protection, plus a spare</strong><span class="why">Ranges are loud enough to damage hearing. Muffs, plugs, or both, and a second pair if the first gets lost.</span></li></ul>
+        <h2>The firearm and ammunition</h2>
+        <ul><li><strong>The firearm you will shoot</strong><span class="why">Keep it unloaded until the range rules say otherwise, and cased if the range requires a case.</span></li><li><strong>Ammunition that matches that firearm</strong><span class="why">Read the barrel, the manual, and the box. The app’s fit checks are a guide. The markings on the gun decide.</span></li><li><strong>Magazines that fit, and a way to set them on the bench</strong><span class="why">A magazine that does not lock in is not a spare. Confirm the fit before you leave home.</span></li></ul>
+        <h2>The bay</h2>
+        <ul><li><strong>Targets, tape or a stapler, and a marker</strong><span class="why">Skip these if your range provides them. Bring them if it does not.</span></li><li><strong>A chamber flag if the range uses one, and a small tool</strong><span class="why">A cold range means hands off. Know the rule before you open the case.</span></li><li><strong>Water, a hat, and sun protection for an outdoor bay</strong><span class="why">A long string of fire is hotter and longer than it feels at the car.</span></li><li><strong>Your identification and the range rules</strong><span class="why">Many ranges ask to see an ID, and their rules override a general list.</span></li></ul>
+        <h2>On the line</h2>
+        <ul><li><strong>Treat every firearm as if it is loaded.</strong><span class="why">That includes one you just cleared.</span></li><li><strong>Keep the muzzle in a safe direction the range allows.</strong><span class="why">A safe direction is the berm or the backstop, not the people beside you.</span></li><li><strong>Keep your finger outside the trigger guard until you are ready to fire.</strong><span class="why">Ready means the sights are on the target and the range is hot.</span></li><li><strong>Know the target and what is beyond it.</strong><span class="why">A miss still goes somewhere.</span></li></ul>
+        <p>The range starter fills empty slots with clear eye protection, electronic ear muffs, a small pack, and range gloves from the catalog. It does not add a helmet, a firearm, or ammunition. The catalog has no first-aid kit, paper targets, or cleaning kit, so the button cannot fill those. This page has no buy link for a firearm or ammunition.</p>
+        <h2>Build it in the app</h2>
+        <p>The button opens the builder and fills empty slots from this list. A slot you already filled stays as it is. These are catalog records you can swap.</p>
+        <p><a class="btn-primary build-link" href="../../?kit=range">Build this kit</a></p>
+        <ul><li><strong>Eyewear: ESS Crossbow, black / clear</strong></li><li><strong>Headset: Howard Leight Impact Sport</strong></li><li><strong>Backpack: Haley Strategic FlatPack</strong></li><li><strong>Gloves: Outdoor Research HD Range Glove</strong></li></ul>
+        <nav aria-label="Other lists"><ul><li><a href="../72-hour-bag/">72-hour bag</a></li><li><a href="../truck-kit/">Truck kit</a></li></ul></nav>
+      </main>
+      <footer class="site-footer">
+        <nav aria-label="Guides and policies"><a href="../../about/">About</a><a href="../../privacy/">Privacy</a><a href="../72-hour-bag/">72-hour bag</a><a href="../truck-kit/">Truck kit</a><a href="./" aria-current="page">Range bag</a></nav>
+      </footer>
+    </div>
+    <script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var href = document.documentElement.getAttribute('data-sw');
+  if (!href) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register(new URL(href, document.baseURI).href);
+  });
+})();
+</script>
+  </body>
+</html>

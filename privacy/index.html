@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-sw="../sw.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <title>Privacy · KitCheck Tactical</title>
+    <meta name="description" content="What this app stores on your device, what it sends, and which other sites it contacts." />
+    <link rel="canonical" href="https://kitchecktactical.com/privacy/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KitCheck Tactical" />
+    <meta property="og:title" content="Privacy · KitCheck Tactical" />
+    <meta property="og:description" content="What this app stores on your device, what it sends, and which other sites it contacts." />
+    <meta property="og:url" content="https://kitchecktactical.com/privacy/" />
+    <meta property="og:image" content="https://kitchecktactical.com/icons/icon-512.png" />
+    <meta property="og:image:alt" content="KitCheck Tactical" />
+    <link rel="manifest" href="https://kitchecktactical.com/manifest.webmanifest" />
+    <link rel="icon" href="https://kitchecktactical.com/icons/icon-192.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/index-B7SMwE__.css" />
+    <script>
+(function () {
+  var key = 'kitcheck-theme';
+  var theme = 'dark';
+  try {
+    var saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+  } catch (e) {}
+  function resolved() {
+    if (theme === 'system') return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return theme === 'light' ? 'light' : 'dark';
+  }
+  function paint() {
+    var mode = resolved();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.resolved = mode;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#F4F2EE' : '#171A1C');
+    var button = document.getElementById('theme-toggle');
+    if (button) button.textContent = theme === 'system' ? 'Theme: system' : 'Theme: ' + mode;
+  }
+  paint();
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (theme === 'system') paint();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    paint();
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark';
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      paint();
+    });
+  });
+})();
+</script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="shell doc">
+      <header class="top">
+        <a class="doc-brand" href="../">KitCheck Tactical</a>
+        <button type="button" id="theme-toggle">Theme: dark</button>
+      </header>
+      <main id="content">
+        <h1>Privacy</h1>
+        <p class="note">This is a plain-language summary, not legal advice.</p>
+        <p>Effective date: November 25, 2026.</p>
+        <p>There is no account. The app does not upload your profile, loadouts, or library to a server it runs.</p>
+        <h2>On this device</h2>
+        <p>An IndexedDB database named kitcheck holds four stores. Profile stores your state, ZIP, body, user type, whether gear is issued, age, the age gate derived from that age, units, theme, height, weight, and size notes for helmet, plate, belt, boot, and glove. Loadouts store the kit name, slots, part builds, mod presets, weight budget, owned marks, and bag assignments. Library stores items you add, including a tag, a price you typed, fit notes, and a photo if you attached one. Reminders store a name, a kind, and a date you typed.</p>
+        <p>localStorage holds the theme, the cart, the figure background, prices you have already seen, a demo flag, a timeline of items you marked owned, whether the tour is on, the tradeoff slider, whether you dismissed starter kits, and the checked rows of a kit checklist.</p>
+        <p>The service worker can keep app files in the browser cache so a page you have loaded can open offline. Product photos from other sites can be cached too, when the image is under 1 megabyte, up to 200 images.</p>
+        <p>You can download a JSON file of the profile, loadouts, library, and reminders, or import one. That file goes where you save it. You can also clear the on-device data from the profile screen.</p>
+        <h2>What is sent</h2>
+        <p>Opening the app requests its own files, including the example price file, from the same site that served the page. Those requests stay on that site.</p>
+        <p>Build assist is off unless the site was built with an address for it. In this project that address is empty, so the button is hidden and the app does not contact a build-assist server. If a build turns it on, Ask sends the words you typed and catalog rows (an id, a name, a price, and a weight) to that address.</p>
+        <p>Share puts the loadout in the link’s hash on this device: the name, preset, slots, part builds, weight budget, and any hand-entered item name and fit notes. Photos are left out. Fit fields whose names contain “price” or “zip” are left out. The profile, age, and ZIP are not in that link. Whoever you send the link to can open that loadout. The app does not upload the link.</p>
+        <p>A barcode scan uses the camera on this device and compares the code to the catalog stored here. A code that is not in that list shows no data. The picture from the camera is not sent by the app.</p>
+        <h2>Other sites</h2>
+        <p>Type is packaged with the app. These pages do not request a font file from another site.</p>
+        <section aria-label="Picture hosts"><p>Showing a product photo can request the picture from the host in its address. The catalog picture list uses these hosts:</p><ul class="host-list"><li>agilitegear.com</li><li>cdn.dam.salomon.com</li><li>cdn.olightstore.com</li><li>cdn.prod.website-files.com</li><li>cdn.shopify.com</li><li>cdn11.bigcommerce.com</li><li>clouddefensive.com</li><li>esseyepro.com</li><li>ferroconcepts.com</li><li>fnamerica.com</li><li>haleystrategic.com</li><li>i.lfi.media</li><li>infitacusa.com</li><li>inforcelights.com</li><li>magpul.com</li><li>modlite.com</li><li>premierbodyarmor.com</li><li>res.cloudinary.com</li><li>shaw-concepts.com</li><li>shop.teamwendy.com</li><li>springfieldarmory.b-cdn.net</li><li>tactical511.widen.net</li><li>vertx.com</li><li>waltherarms.com</li><li>www.511tactical.com</li><li>www.aeroprecisionusa.com</li><li>www.bellevilleboot.com</li><li>www.bluealphabelts.com</li><li>www.cryeprecision.com</li><li>www.federalpremium.com</li><li>www.garmonttactical.com</li><li>www.gatorz.com</li><li>www.goruck.com</li><li>www.hardheadveterans.com</li><li>www.mysteryranch.com</li><li>www.outdoorresearch.com</li><li>www.speer.com</li><li>www.teamwendy.com</li><li>www.wileyx.com</li></ul></section>
+        <p>A buy link, a store page, or a maker page opens only when you choose it. In this build the price file’s links are on example.com, and the dollar amounts in the builder are example prices. Maker pages use the address stored on that catalog row. Some ammunition items can open ammoseek.com in a new tab after the same age check as the other ammunition links. The app does not fetch that site on its own.</p>
+        <h2>Cookies, analytics, and contact</h2>
+        <p>The app code does not set cookies. It does not include an analytics tag. A site you open from a link can set its own cookies. This app does not read those.</p>
+        <p>Contact is the support address support@kitchecktactical.com. The form opens your email app. The message includes the kind of note, the app version, the loadout id, a reply address if you typed one, and the text you wrote. It is sent when you send the email.</p>
+        <nav aria-label="Email support"><ul><li><a href="mailto:support@kitchecktactical.com">support@kitchecktactical.com</a></li></ul></nav>
+        <nav aria-label="Read more"><ul><li><a href="../about/">About</a></li></ul></nav>
+      </main>
+      <footer class="site-footer">
+        <nav aria-label="Guides and policies"><a href="../about/">About</a><a href="./" aria-current="page">Privacy</a><a href="../guides/72-hour-bag/">72-hour bag</a><a href="../guides/truck-kit/">Truck kit</a><a href="../guides/range-bag/">Range bag</a></nav>
+      </footer>
+    </div>
+    <script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var href = document.documentElement.getAttribute('data-sw');
+  if (!href) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register(new URL(href, document.baseURI).href);
+  });
+})();
+</script>
+  </body>
+</html>

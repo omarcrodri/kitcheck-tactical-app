@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-sw="../../sw.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <title>Truck kit · KitCheck Tactical</title>
+    <meta name="description" content="A truck kit checklist for weather, a breakdown, and walking out, plus the app truck starter." />
+    <link rel="canonical" href="https://kitchecktactical.com/guides/truck-kit/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KitCheck Tactical" />
+    <meta property="og:title" content="Truck kit · KitCheck Tactical" />
+    <meta property="og:description" content="A truck kit checklist for weather, a breakdown, and walking out, plus the app truck starter." />
+    <meta property="og:url" content="https://kitchecktactical.com/guides/truck-kit/" />
+    <meta property="og:image" content="https://kitchecktactical.com/icons/icon-512.png" />
+    <meta property="og:image:alt" content="KitCheck Tactical" />
+    <link rel="manifest" href="https://kitchecktactical.com/manifest.webmanifest" />
+    <link rel="icon" href="https://kitchecktactical.com/icons/icon-192.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/index-B7SMwE__.css" />
+    <script>
+(function () {
+  var key = 'kitcheck-theme';
+  var theme = 'dark';
+  try {
+    var saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+  } catch (e) {}
+  function resolved() {
+    if (theme === 'system') return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return theme === 'light' ? 'light' : 'dark';
+  }
+  function paint() {
+    var mode = resolved();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.resolved = mode;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#F4F2EE' : '#171A1C');
+    var button = document.getElementById('theme-toggle');
+    if (button) button.textContent = theme === 'system' ? 'Theme: system' : 'Theme: ' + mode;
+  }
+  paint();
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (theme === 'system') paint();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    paint();
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark';
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      paint();
+    });
+  });
+})();
+</script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="shell doc">
+      <header class="top">
+        <a class="doc-brand" href="../../">KitCheck Tactical</a>
+        <button type="button" id="theme-toggle">Theme: dark</button>
+      </header>
+      <main id="content">
+        <h1>Truck kit</h1>
+        <p>A truck kit stays with the vehicle: weather, a breakdown, and the walk if you have to leave the vehicle. A parked truck is a poor place to leave a firearm. Follow the law where you park, and keep dangerous items out of reach.</p>
+        <h2>If you have to walk</h2>
+        <ul><li><strong>A pack you can carry</strong><span class="why">If the truck stops, the kit has to leave with you. The truck starter fills an empty pack slot with a truck pack from the catalog.</span></li><li><strong>Boots, work gloves, and eye protection</strong><span class="why">Roadside work and a walk both need them. The starter fills these slots when they are empty.</span></li><li><strong>A shell layer and a warm hat</strong><span class="why">The cab is shelter only while you are in it. The starter uses a shell and a beanie from the catalog, not a helmet.</span></li></ul>
+        <h2>Weather and the vehicle</h2>
+        <ul><li><strong>A blanket or something warm</strong><span class="why">Waiting for a tow in the cold is the job this item does.</span></li><li><strong>Drinking water and a shelf-stable snack</strong><span class="why">Heat and cold in a cab ruin food. Rotate what you store there.</span></li><li><strong>A flashlight and a way to be seen</strong><span class="why">A bright cloth or a triangle helps other drivers see a stopped vehicle.</span></li><li><strong>A way to deal with a flat or a dead battery</strong><span class="why">A tire tool, or jumper cables or a jump pack, and practice using them before you need them.</span></li></ul>
+        <h2>Paper and a small kit</h2>
+        <ul><li><strong>A map, a pen, and a little cash</strong><span class="why">Useful when the phone is dead or the card reader is down.</span></li><li><strong>A copy of the insurance card and a phone cable</strong><span class="why">Keep the copy where you can reach it without unpacking the whole truck.</span></li><li><strong>A small first-aid kit and personal medicines</strong><span class="why">Cuts and a missed dose are the usual problems, not a dramatic one.</span></li></ul>
+        <p>The truck starter does not add a plate carrier, a chest rig, or soft armor. The catalog has no first-aid kit, handheld light, water container, tool, or recovery item, so the button cannot fill those. Pack them yourself.</p>
+        <h2>Build it in the app</h2>
+        <p>The button opens the builder and fills empty slots from this list. A slot you already filled stays as it is. These are catalog records you can swap.</p>
+        <p><a class="btn-primary build-link" href="../../?kit=truck">Build this kit</a></p>
+        <ul><li><strong>Backpack: Ferro Concepts Ghostwild Truckruck</strong></li><li><strong>Clothing/camo: Crye Precision FieldShell 2</strong></li><li><strong>Headwear: Outdoor Research Polartec 200 Beanie</strong></li><li><strong>Gloves: Outdoor Research Aksel Work Glove</strong></li><li><strong>Eyewear: ESS Crowbar Subdued Logo</strong></li><li><strong>Boots: Belleville C795 / 200g Insulated Waterproof Boot</strong></li></ul>
+        <nav aria-label="Other lists"><ul><li><a href="../72-hour-bag/">72-hour bag</a></li><li><a href="../range-bag/">Range bag</a></li></ul></nav>
+      </main>
+      <footer class="site-footer">
+        <nav aria-label="Guides and policies"><a href="../../about/">About</a><a href="../../privacy/">Privacy</a><a href="../72-hour-bag/">72-hour bag</a><a href="./" aria-current="page">Truck kit</a><a href="../range-bag/">Range bag</a></nav>
+      </footer>
+    </div>
+    <script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var href = document.documentElement.getAttribute('data-sw');
+  if (!href) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register(new URL(href, document.baseURI).href);
+  });
+})();
+</script>
+  </body>
+</html>

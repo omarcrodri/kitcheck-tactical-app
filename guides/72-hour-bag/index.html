@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-sw="../../sw.js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171A1C" />
+    <title>72-hour bag · KitCheck Tactical</title>
+    <meta name="description" content="A three-day bag checklist for water, food, clothing, and the slots KitCheck can fill." />
+    <link rel="canonical" href="https://kitchecktactical.com/guides/72-hour-bag/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KitCheck Tactical" />
+    <meta property="og:title" content="72-hour bag · KitCheck Tactical" />
+    <meta property="og:description" content="A three-day bag checklist for water, food, clothing, and the slots KitCheck can fill." />
+    <meta property="og:url" content="https://kitchecktactical.com/guides/72-hour-bag/" />
+    <meta property="og:image" content="https://kitchecktactical.com/icons/icon-512.png" />
+    <meta property="og:image:alt" content="KitCheck Tactical" />
+    <link rel="manifest" href="https://kitchecktactical.com/manifest.webmanifest" />
+    <link rel="icon" href="https://kitchecktactical.com/icons/icon-192.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/index-B7SMwE__.css" />
+    <script>
+(function () {
+  var key = 'kitcheck-theme';
+  var theme = 'dark';
+  try {
+    var saved = localStorage.getItem(key);
+    if (saved === 'light' || saved === 'dark' || saved === 'system') theme = saved;
+  } catch (e) {}
+  function resolved() {
+    if (theme === 'system') return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return theme === 'light' ? 'light' : 'dark';
+  }
+  function paint() {
+    var mode = resolved();
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.resolved = mode;
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', mode === 'light' ? '#F4F2EE' : '#171A1C');
+    var button = document.getElementById('theme-toggle');
+    if (button) button.textContent = theme === 'system' ? 'Theme: system' : 'Theme: ' + mode;
+  }
+  paint();
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function () {
+    if (theme === 'system') paint();
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    paint();
+    var button = document.getElementById('theme-toggle');
+    if (!button) return;
+    button.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : theme === 'light' ? 'system' : 'dark';
+      try { localStorage.setItem(key, theme); } catch (e) {}
+      paint();
+    });
+  });
+})();
+</script>
+  </head>
+  <body>
+    <a class="skip" href="#content">Skip to content</a>
+    <div class="shell doc">
+      <header class="top">
+        <a class="doc-brand" href="../../">KitCheck Tactical</a>
+        <button type="button" id="theme-toggle">Theme: dark</button>
+      </header>
+      <main id="content">
+        <h1>72-hour bag</h1>
+        <p>A 72-hour bag is a pack you can carry if you need to leave home, or stay out, for about three days. Pack for the people who would carry it and for the weather where you live. Swap anything that does not fit your household.</p>
+        <h2>Water</h2>
+        <ul><li><strong>Drinking water</strong><span class="why">Plan on roughly a gallon per person per day, and more in heat. Carry some of it, and leave room to refill.</span></li><li><strong>A way to treat more water</strong><span class="why">A small filter, tablets, or a pot you can boil in. The water you start with runs out.</span></li></ul>
+        <h2>Food</h2>
+        <ul><li><strong>Ready-to-eat food for three days</strong><span class="why">Choose food you can eat if you cannot cook. A stove is useful and is one more thing to fuel.</span></li><li><strong>A way to open and eat it</strong><span class="why">A simple utensil and a bag for trash. Hunger is easier to manage when the meal is not a project.</span></li></ul>
+        <h2>Clothing and shelter</h2>
+        <ul><li><strong>A layer, a rain shell, and a hat</strong><span class="why">Weather stops people before the food does.</span></li><li><strong>Gloves and shoes you can walk in</strong><span class="why">Blisters and cold hands end a walk early.</span></li><li><strong>A compact emergency blanket or a small tarp</strong><span class="why">A dry place to sit matters at night.</span></li></ul>
+        <h2>Light, power, and paper</h2>
+        <ul><li><strong>A headlamp and spare power</strong><span class="why">Hands stay free after dark. Bring spare batteries or a way to recharge.</span></li><li><strong>A paper map and a short list of phone numbers</strong><span class="why">A dead phone is not a route, and cell service is not a plan.</span></li><li><strong>Copies of identification and a little cash</strong><span class="why">Small bills are easier to use when a card reader is down.</span></li></ul>
+        <h2>Health and a few tools</h2>
+        <ul><li><strong>Medicines you already take</strong><span class="why">Bring at least three days, in a bag you can identify by touch.</span></li><li><strong>Bandages, blister care, and hygiene items</strong><span class="why">Small problems are a common reason people stop.</span></li><li><strong>A multi-tool, some cord, and a whistle</strong><span class="why">A whistle carries farther than a voice when you need to be found.</span></li></ul>
+        <p>Water, food, and a paper map are not slots in the builder. The button fills the slots the app does have.</p>
+        <h2>Build it in the app</h2>
+        <p>The button opens the builder and fills empty slots from this list. A slot you already filled stays as it is. These are catalog records you can swap.</p>
+        <p><a class="btn-primary build-link" href="../../?kit=seventy-two">Build this kit</a></p>
+        <ul><li><strong>Backpack: 5.11 Tactical RUSH 72 2.0 Backpack 55L</strong></li><li><strong>Eyewear: Wiley X Saber Advanced, matte black / clear</strong></li><li><strong>Gloves: Magpul Breach Glove 2.0</strong></li><li><strong>Boots: Belleville C795 / 200g Insulated Waterproof Boot</strong></li></ul>
+        <nav aria-label="Other lists"><ul><li><a href="../truck-kit/">Truck kit</a></li><li><a href="../range-bag/">Range bag</a></li></ul></nav>
+      </main>
+      <footer class="site-footer">
+        <nav aria-label="Guides and policies"><a href="../../about/">About</a><a href="../../privacy/">Privacy</a><a href="./" aria-current="page">72-hour bag</a><a href="../truck-kit/">Truck kit</a><a href="../range-bag/">Range bag</a></nav>
+      </footer>
+    </div>
+    <script>
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+  var href = document.documentElement.getAttribute('data-sw');
+  if (!href) return;
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register(new URL(href, document.baseURI).href);
+  });
+})();
+</script>
+  </body>
+</html>
